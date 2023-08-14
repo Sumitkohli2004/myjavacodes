@@ -51,7 +51,7 @@ public class linkedlist_using_queue {
         que.enqueue(30);
         que.enqueue(40);
         que.enqueue(50);
-         que.enqueue(60);
+        que.enqueue(60);
         que.enqueue(70);
         que.enqueue(80);
         que.print();
