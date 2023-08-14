@@ -32,7 +32,7 @@ class queuelinkedlist {
     public int dequeue() {
         int result = -1;
         if (rear == null && front == null) {
-            System.out.println("queue is null - ");
+            System.out.println("queue is empty - ");
             return result;
         } else
             result = front.data;
