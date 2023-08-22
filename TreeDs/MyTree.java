@@ -68,8 +68,8 @@ class Tree {
     public boolean findNode(treeNode root , int d){
         boolean res = false;
         if(root.data== d ){
-            System.out.println("yes it is exist in tree - ");
-            return true;
+           System.out.println("Yes,it is exist in tree - ");
+            return true; 
         }
         else{
             if(root.left!=null)
