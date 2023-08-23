@@ -61,26 +61,26 @@ class Tree {
 
         }
     }
-    public boolean findelement(int ele){
-        return findNode(root,ele);
+
+    public boolean findelement(int ele) {
+        return findNode(root, ele);
     }
 
-    public boolean findNode(treeNode root , int d){
-        boolean res = false;
-        if(root.data== d ){
-           System.out.println("Yes,it is exist in tree - ");
-            return true; 
+    public boolean findNode(treeNode root, int d) {
+        boolean res = false,res2=false;
+        if (root.data == d) {
+            System.out.println("Yes,it is exist in tree - ");
+            return true;
         }
-        else{
-            if(root.left!=null)
-            res = findNode(root.left,d);
-            if(root.right!=null)
-            res = findNode(root.right,d);
-
-        }
-        return res;
+     
+        if (root.left != null)
+            res = findNode(root.left, d);
+        if (root.right != null)
+            res2 = findNode(root.right, d);
         
-     }
+        return res || res2;
+
+    }
 
 }
 
@@ -89,15 +89,14 @@ public class MyTree {
         Tree bt = new Tree();
         bt.insert(10);
         bt.insert(5);
+        bt.insert(1);
+        bt.insert(7);
         bt.insert(15);
         bt.insert(20);
         bt.insert(25);
         bt.insert(37);
         bt.printnode();
-        System.out.println(bt.findelement(15));
-        
-        
+        System.out.println(bt.findelement(1));
 
-        
     }
 }
