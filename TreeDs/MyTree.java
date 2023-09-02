@@ -40,69 +40,67 @@ class Tree {
 
     }
 
-    public void printnode() {
-        if (root == null) {
-            System.out.println("root is empty - ");
-            return;
-        }
-        Queue<treeNode> q = new LinkedList<>();
-        q.add(root);
+    // public void printnode() {
+    //     if (root == null) {
+    //         System.out.println("root is empty - ");
+    //         return;
+    //     }
+    //     Queue<treeNode> q = new LinkedList<>();
+    //     q.add(root);
 
-        while (!q.isEmpty()) {
+    //     while (!q.isEmpty()) {
 
-            treeNode node = q.poll();
-            System.out.print(node.data + " ");
+    //         treeNode node = q.poll();
+    //         System.out.print(node.data + " ");
 
-            if (node.left != null) {
-                q.add(node.left);
-            }
-            if (node.right != null) {
-                q.add(node.right);
-            }
+    //         if (node.left != null) {
+    //             q.add(node.left);
+    //         }
+    //         if (node.right != null) {
+    //             q.add(node.right);
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
      class NodeTag{
      treeNode Node;
-        int tag ;
+        int level ;
 
-    NodeTag(int t ,int r){
-    this.Node = Node;
-    this.tag = t;
+    NodeTag(treeNode n ,int l){
+    this.Node = n;
+    this.level = l;
 }
 
   }
 
-//   public void inOrderST() {
-//             inOrderSTACK(root, 0);
-//         }
 
-//         private void inOrderSTACK(treeNode root, int tag) {
-//             Stack<NodeTag> st = new Stack<>();
-//             if (root == null)
-//                 return;
 
-//             st.push(new NodeTag(root, 0)); 
+ private void inOrderSTACK(treeNode Node, int level) {
+    Queue<NodeTag> q = new LinkedList<>();
 
-//             while (!st.isEmpty()) {
-//                 NodeTag temp = st.pop();
+    if(root!=null)
+        q.add(new NodeTag(Node,0));
+    int track = 0;
 
-//                 if (temp.left != null && tag == 0) {
-//                     st.push(new NodeTag(temp.Node, temp.tag + 1));
-//                     st.push(new NodeTag(temp.Node.left, 0));
+    while(q.isEmpty()){
+  NodeTag temp = q.poll();
+  System.out.println(root.data+" ");
+  if(temp.Node.left!=null)
+    q.add(new NodeTag(temp.Node.left,temp.level+1 ));
+    q.add(new NodeTag(temp.Node.right,temp.level+1 ));
+    if(track!=temp.level){
+        System.out.println();
+        track=temp.level;
+    }
+    System.out.print(temp.Node.data);
 
-//                 }
 
-//                 else {
-//                     System.out.println(temp.Node.data + " ");
-//                     if (temp.Node.right != null)
-//                         st.push(new NodeTag(root.Node.right, 0));
-//                 }
-//             }
 
-//         }
-
+}    
+ }
+            
+           
         public int sum(){
            return TreeSum(root);
         }
@@ -113,7 +111,7 @@ class Tree {
             int left = TreeSum(root.left);
             int right = TreeSum(root.right);
 
-            return left + right + root.data;
+            return left + right + root.data; 
         }
 
 
@@ -165,7 +163,7 @@ public class MyTree {
         bt.insert(20);
         bt.insert(25);
         bt.insert(37);
-        bt.printnode();
+        // bt.printnode();
         System.out.println(bt.findelement(37));
 
         System.out.println("treesum is - "+bt.sum());
