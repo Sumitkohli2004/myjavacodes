@@ -9,22 +9,22 @@ import java.io.IOException;
 
 public class myfile {
 
-  public static void print_string() throws IOException {
-    String path = "C:/Users/DELL/Documents/ColectionFrameWork/file_handling/FIle_info/info.txt";
-    FileWriter fw = new FileWriter(path);
-    Scanner sc = new Scanner(System.in);
+  // public static void print_string() throws IOException {
+  //   String path = "C:/Users/DELL/Documents/ColectionFrameWork/file_handling/FIle_info/info.txt";
+  //   FileWriter fw = new FileWriter(path);
+  //   Scanner sc = new Scanner(System.in);                        
 
-    System.out.println("Eneter a String -");
-    String st = sc.nextLine();
+  //   System.out.println("Eneter a String -");
+  //   String st = sc.nextLine();
 
-    while (!st.equals("q")) {
-      fw.append(st + "\n");
-      System.out.println("Enter a String - ");
-      st = sc.nextLine();
-    }
+  //   while (!st.equals("q")) {
+  //     fw.append(st + "\n");
+  //     System.out.println("Enter a String - ");
+  //     st = sc.nextLine();
+  //   }
 
-    fw.close();
-  }
+  //   fw.close();
+  // }
 
   public static void Get_info() throws IOException {
     String path = "C:/Users/DELL/Documents/ColectionFrameWork/file_handling/FIle_info/info.txt";
@@ -38,7 +38,7 @@ public class myfile {
       lineCount++;
 
       StringTokenizer word = new StringTokenizer(currentLine);
-            wordCount += word.countTokens();
+          wordCount += word.countTokens();
 
       
         charcount+=currentLine.length();
