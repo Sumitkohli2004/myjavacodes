@@ -1,9 +1,9 @@
 package TreeDs;
 
 import java.util.*;
-    
+
 class treeNode {
-    
+
     int data;
     treeNode left;
     treeNode right;
@@ -26,7 +26,7 @@ class Tree {
         root = insertNode(root, d);
     }
 
-    public treeNode insertNode(treeNode R, int d) {
+    public treeNode insertNode(treeNode R, int d) { 
         treeNode newNode = new treeNode(d);
         if (R == null) {
             R = newNode;
@@ -40,115 +40,112 @@ class Tree {
 
     }
 
-    // public void printnode() {
-    //     if (root == null) {
-    //         System.out.println("root is empty - ");
-    //         return;
-    //     }
-    //     Queue<treeNode> q = new LinkedList<>();
-    //     q.add(root);
+    public void printnode() {
+    if (root == null) {
+    System.out.println("root is empty - ");
+    return;
+    }
+    Queue<treeNode> q = new LinkedList<>();
+    q.add(root);
 
-    //     while (!q.isEmpty()) {
+    while (!q.isEmpty()) {
 
-    //         treeNode node = q.poll();
-    //         System.out.print(node.data + " ");
+    treeNode node = q.poll();
+    System.out.print(node.data + " ");
 
-    //         if (node.left != null) {
-    //             q.add(node.left);
-    //         }
-    //         if (node.right != null) {
-    //             q.add(node.right);
-    //         }
+    if (node.left != null) {
+    q.add(node.left);
+    }
+    if (node.right != null) {
+    q.add(node.right);
+    }
 
-    //     }
+    }
+    }
+
+    class NodeTag {
+        treeNode Node;
+        int level;
+
+        NodeTag(treeNode n, int l) {
+            this.Node = n;
+            this.level = l;
+        }
+
+    }
+
+    public void traverse(){
+        inOrderSTACK(root);
+    }
+
+    private void inOrderSTACK(treeNode Node) {
+        Queue<NodeTag> q = new LinkedList<>();
+        if (root != null)
+            q.add(new NodeTag(Node, 0));
+        
+        int track = 0;
+
+        while (!q.isEmpty()) {
+            NodeTag temp = q.poll();
+    if(temp.Node.left != null) q.add(new NodeTag(temp.Node.left, temp.level + 1));
+    if(temp.Node.right!=null) q.add(new NodeTag(temp.Node.right, temp.level + 1));
+        
+            if (track != temp.level) {
+                System.out.println();
+                track = temp.level;
+            }
+            System.out.print(temp.Node.data+"  ");
+        }
+    }
+
+    public int sum() {
+        return TreeSum(root);
+    }
+
+    public int TreeSum(treeNode root) {
+        if (root == null)
+            return 0;
+
+        int left = TreeSum(root.left);
+        int right = TreeSum(root.right);
+
+        return left + right + root.data;
+    }
+
+    // public boolean findelement(int ele) {
+    //     return findNode(root, ele);
     // }
 
-     class NodeTag{
-     treeNode Node;
-        int level ;
+    // public boolean findNode(treeNode root, int d) {
+    //     boolean res = false,res2=false;
+    //     if (root.data == d) {
+    //     System.out.println("Yes,it is exist in tree - ");
+    //     return true;
+    //     }
 
-    NodeTag(treeNode n ,int l){
-    this.Node = n;
-    this.level = l;
-}
+    //     if (root.left != null)
+    //     res = findNode(root.left, d);
+    //     if (root.right != null)
+    //     res2 = findNode(root.right, d);
 
-  }
+    //     return res || res2;
 
+    //     boolean res = false;
 
+    //     if (root.data == d) {
+    //         System.out.println("yes, it is exist in tree - ");
+    //         return true;
+    //     }
 
- private void inOrderSTACK(treeNode Node, int level) {
-    Queue<NodeTag> q = new LinkedList<>();
+    //     if (root.data <= d && root.right != null) {
+    //         res = findNode(root.right, d);
+    //     }
+    //     if (root.data > d && root.left != null) {
+    //         res = findNode(root.left, d);
+    //     }
+    //     return res;
 
-    if(root!=null)
-        q.add(new NodeTag(Node,0));
-    int track = 0;
-
-    while(q.isEmpty()){
-  NodeTag temp = q.poll();
-  System.out.println(root.data+" ");
-  if(temp.Node.left!=null)
-    q.add(new NodeTag(temp.Node.left,temp.level+1 ));
-    q.add(new NodeTag(temp.Node.right,temp.level+1 ));
-    if(track!=temp.level){
-        System.out.println();
-        track=temp.level;
-    }
-    System.out.print(temp.Node.data);
-
-
-
-}    
- }
-            
-           
-        public int sum(){
-           return TreeSum(root);
-        }
-
-        public int TreeSum(treeNode root){
-            if(root==null) return 0;
-
-            int left = TreeSum(root.left);
-            int right = TreeSum(root.right);
-
-            return left + right + root.data; 
-        }
-
-
-    public boolean findelement(int ele) {
-        return findNode(root, ele);
-    }
-
-    public boolean findNode(treeNode root, int d) {
-        // boolean res = false,res2=false;
-        // if (root.data == d) {
-        //     System.out.println("Yes,it is exist in tree - ");
-        //     return true;
-        // }
-     
-        // if (root.left != null)
-        //     res = findNode(root.left, d);
-        // if (root.right != null)
-        //     res2 = findNode(root.right, d);
-        
-        // return res || res2;
-
-        boolean res = false;
-
-        if(root.data==d){
-            System.out.println("yes, it is exist in tree - ");
-            return true;
-        }
-
-        if(root.data<=d && root.right!=null){
-            res = findNode(root.right, d);
-        }
-        if(root.data>d && root.left!=null){
-            res = findNode(root.left, d);
-        }
-        return res;
-
-    }
+    // }
 
 }
 
@@ -164,9 +161,13 @@ public class MyTree {
         bt.insert(25);
         bt.insert(37);
         // bt.printnode();
-        System.out.println(bt.findelement(37));
+        
+        bt.traverse();
+        System.out.println(" \nsum is - "+bt.sum());
 
-        System.out.println("treesum is - "+bt.sum());
+        // System.out.println(bt.findelement(37));
+
+        // System.out.println("treesum is - " + bt.sum());
 
     }
 }

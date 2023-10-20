@@ -1,0 +1,189 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Strings",
+            "request": "launch",
+            "mainClass": "Strings",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "BFS",
+            "request": "launch",
+            "mainClass": "Graph.BFS",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "disconnectedGraph",
+            "request": "launch",
+            "mainClass": "Graph.disconnectedGraph",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "unWeightedGraph",
+            "request": "launch",
+            "mainClass": "Graph.unWeightedGraph",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "WeightedGraph",
+            "request": "launch",
+            "mainClass": "Graph.WeightedGraph",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "classroom",
+            "request": "launch",
+            "mainClass": "Graph.classroom",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "myfile",
+            "request": "launch",
+            "mainClass": "FIle_info.myfile",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "MyClient",
+            "request": "launch",
+            "mainClass": "File_owner.MyClient",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "file_owner",
+            "request": "launch",
+            "mainClass": "File_owner.file_owner",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "MyStack",
+            "request": "launch",
+            "mainClass": "MyStack",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "Hashset",
+            "request": "launch",
+            "mainClass": "Queue.Hashset",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "reverse_a_queue",
+            "request": "launch",
+            "mainClass": "Queue.reverse_a_queue",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "Swap_Number",
+            "request": "launch",
+            "mainClass": "Swap_Number",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "MyTree",
+            "request": "launch",
+            "mainClass": "TreeDs.MyTree",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "Stringbuilder",
+            "request": "launch",
+            "mainClass": "TreeDs.Stringbuilder",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "append_100_Files",
+            "request": "launch",
+            "mainClass": "append_100_Files",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "balanced_bracket",
+            "request": "launch",
+            "mainClass": "balanced_bracket",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "createWIFI",
+            "request": "launch",
+            "mainClass": "createWIFI",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "file1_handling",
+            "request": "launch",
+            "mainClass": "file1_handling",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "flie_handling",
+            "request": "launch",
+            "mainClass": "flie_handling",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "linkedlist_using_queue",
+            "request": "launch",
+            "mainClass": "linkedlist_using_queue",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "next_greater_element",
+            "request": "launch",
+            "mainClass": "next_greater_element",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "remove_consecutive_subsequences",
+            "request": "launch",
+            "mainClass": "remove_consecutive_subsequences",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "stack_using_queue",
+            "request": "launch",
+            "mainClass": "stack_using_queue",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        },
+        {
+            "type": "java",
+            "name": "stock_span_method",
+            "request": "launch",
+            "mainClass": "stock_span_method",
+            "projectName": "ColectionFrameWork_e4fe6672"
+        }
+    ]
+}

@@ -15,7 +15,7 @@ public class file_owner {
 
         System.out.println("Enter the path here - ");
         String A = sc.nextLine();
-        Path p = Path.get(A);
+        // Path p = Path.get(A);
 
         FileOwnerAttributeView view = Files.getFileAttributeView(p, FileOwnerAttributeView.class);
 
